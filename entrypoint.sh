@@ -3,8 +3,10 @@ set -euo pipefail
 wordpress_initilizing(){
 	if [[ -d "/var/www/html" ]]; then
 		cd /var/www
-		wget composer create-project symfony/skeleton symfony
-		cd symfony
+    		sudo apt-get install unzip
+		composer create-project symfony/website-skeleton my_project
+		unzip symfony.zip
+		cd wordpress
 		mv * ../html
 		echo "[OK] symfony seccessfly initilized"
 	else
