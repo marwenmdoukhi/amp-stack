@@ -3,9 +3,8 @@ set -euo pipefail
 wordpress_initilizing(){
 	if [[ -d "/var/www/html" ]]; then
 		cd /var/www
-		wget https://fr.wordpress.org/latest-fr_FR.zip
-		unzip latest-fr_FR.zip
-		cd wordpress
+		wget composer create-project symfony/skeleton symfony
+		cd symfony
 		mv * ../html
 		echo "[OK] Wordpress seccessfly initilized"
 	else
