@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-wordpress_initilizing(){
+symfony(){
 	if [[ -d "/var/www/html" ]]; then
 		cd /var/www
 		composer create-project symfony/website-skeleton projet
@@ -16,7 +16,7 @@ if [[ "$1" == apache2* ]]; then
         echo ""
         echo "* SERVER INITIALIZING ... *"
         echo ""
-        #wordpress_initilizing
+        symfony
 		echo ""
         echo "* SERVER STARTED SUCCESSFULY *"
         echo ""
