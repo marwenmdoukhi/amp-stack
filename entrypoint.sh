@@ -7,9 +7,9 @@ symfony(){
 		chmod 777 -R projet
 		#mv -a  /var/www/html
 		mv projet /var/www/html
-		echo "[OK] Wordpress seccessfly initilized"
+		echo "[OK] symfony seccessfly initilized"
 	else
-		echo "[NOTICE] Wordpress alrady initilized ..."
+		echo "[NOTICE] symfony alrady initilized ..."
 	fi
 }
 if [[ "$1" == apache2* ]]; then
