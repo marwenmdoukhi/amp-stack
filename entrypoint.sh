@@ -3,11 +3,11 @@ set -euo pipefail
 symfony(){
 	if [[ ! "$(ls -A /var/www/html)" ]]; then
 		cd /var/www
-		composer create-project symfony/website-skeleton symfonytest
-		chmod 777 -R symfonytest
-		cd symfonytest
+		composer create-project symfony/website-skeleton symfony
+		chmod 777 -R symfony
+		cd symfony
 		cp -a . /var/www/html
-		rm -r /var/www/symfonytest
+		rm -r /var/www/symfony
 		echo "[OK] symfony seccessfly initilized"
 	else
 		echo "[NOTICE] symfony alrady initilized ..."
